@@ -1,0 +1,22 @@
+[
+  {
+    "name": "CT01 - RUT inscrito",
+    "command": "CLIENTECONSULTA|16575156-6",
+    "expected_start": "OK|"
+  },
+  {
+    "name": "CT02 - RUT não inscrito",
+    "command": "CLIENTECONSULTA|30558488-6",
+    "expected_start": "ERROR|No esta inscrito en el programa"
+  },
+  {
+    "name": "CT04 - Registro bem-sucedido",
+    "command": "CLIENTEREGISTRO|16575156-6|11111111|111|11|111|1111|2025-04-07T13:49:00Z",
+    "expected_start": "OK|111|55555|7777777|Venta acumulo 100 puntos"
+  },
+  {
+    "name": "CT05 - Registro sem pontos",
+    "command": "CLIENTREGISTRO|16575156-6|11111111|111|11|111|1111|2025-04-07T13:49:00Z",
+    "expected_start": "OK|0|0|0|Venta no acumuló puntos"
+  }
+]

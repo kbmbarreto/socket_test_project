@@ -1,0 +1,45 @@
+
+    <html>
+    <head><meta charset="UTF-8"><title>Socket Test Report</title></head>
+    <body>
+    <h1>Relatório de Testes de Integração</h1>
+    <p>Executado em: 2025-04-21 18:58:06</p>
+    <table border="1" cellpadding="5">
+        <tr><th>Nome</th><th>Comando</th><th>Esperado</th><th>Resposta</th><th>Status</th></tr>
+        
+        <tr>
+            <td>CT01 - RUT inscrito</td>
+            <td>CLIENTECONSULTA|00000000-6</td>
+            <td>OK|</td>
+            <td>OK|</td>
+            <td style="color: green;">✅</td>
+        </tr>
+        
+        <tr>
+            <td>CT02 - RUT não inscrito</td>
+            <td>CLIENTECONSULTA|00000000-6</td>
+            <td>ERROR|No esta inscrito en el programa</td>
+            <td>ERROR|No esta inscrito en el programa</td>
+            <td style="color: green;">✅</td>
+        </tr>
+        
+        <tr>
+            <td>CT04 - Registro bem-sucedido</td>
+            <td>CLIENTEREGISTRO|00000000-6|10000000|000|00|000|0000|2025-04-07T13:49:00Z</td>
+            <td>OK|100|</td>
+            <td>OK|100|55555|11111111|Venta acumulo 100 puntos</td>
+            <td style="color: green;">✅</td>
+        </tr>
+        
+        <tr>
+            <td>CT05 - Registro sem pontos</td>
+            <td>CLIENTEREGISTRO|00000000-6|10000000|000|00|000|0000|2025-04-07T13:49:00Z</td>
+            <td>OK|0|0|0|Venta no acumuló puntos</td>
+            <td>OK|0|0|0|Venta no acumuló puntos</td>
+            <td style="color: green;">✅</td>
+        </tr>
+        
+    </table>
+    </body>
+    </html>
+    
